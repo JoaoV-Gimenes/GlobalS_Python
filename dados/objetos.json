@@ -1,0 +1,16 @@
+[
+    {
+        "nome": "Sat\u00e9lite Wind",
+        "tipo": "Sat\u00e9lite",
+        "posicao": [
+            7500.0,
+            300.0,
+            100.0
+        ],
+        "velocidade": [
+            0.1,
+            2.4,
+            0.5
+        ]
+    }
+]
