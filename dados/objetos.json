@@ -1,7 +1,7 @@
 [
     {
-        "nome": "Sat\u00e9lite Wind",
-        "tipo": "Sat\u00e9lite",
+        "nome": "Satï¿½lite Wind",
+        "tipo": "Satï¿½lite",
         "posicao": [
             7500.0,
             300.0,
@@ -11,6 +11,48 @@
             0.1,
             2.4,
             0.5
+        ]
+    },
+    {
+        "nome": "feasce",
+        "tipo": "detrito",
+        "posicao": [
+            3000.0,
+            2000.0,
+            100.0
+        ],
+        "velocidade": [
+            10.0,
+            0.3,
+            0.1
+        ]
+    },
+    {
+        "nome": "Dot",
+        "tipo": "satï¿½lite",
+        "posicao": [
+            6000.0,
+            2000.0,
+            2500.0
+        ],
+        "velocidade": [
+            0.1,
+            7.0,
+            2.0
+        ]
+    },
+    {
+        "nome": "Gooneras",
+        "tipo": "satélite ",
+        "posicao": [
+            200.0,
+            1000.0,
+            6300.0
+        ],
+        "velocidade": [
+            2.0,
+            13.0,
+            4.0
         ]
     }
 ]

@@ -19,10 +19,10 @@ def menu():
         print('4 -- Calcular distância entre corpos')
         print('5 -- Simulação de trajeto')
         print('6 -- Sair')
-        opcao = input('O que deseja realizar? --- ')
+        opcao = input('\n O que deseja realizar? --- ')
 
         if opcao == '0':
-            print('encerrando')
+            print('encerrando...')
             break
         elif opcao in opcoes:
             opcoes[opcao]()
