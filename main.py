@@ -1,4 +1,4 @@
-from modulos import cadastro, listagem, distancia, simulacao, relatorio, descricao
+from modulos import cadastro, listagem, distancia, simulacao, descricao
 
 
 def menu():
@@ -8,7 +8,6 @@ def menu():
         '3': listagem.executar,
         '4': distancia.executar,
         '5': simulacao.executar,
-        '6': relatorio.executar,
         '0': None
     }
 
@@ -18,7 +17,7 @@ def menu():
         print('3 -- Listar detritos')
         print('4 -- Calcular distância entre corpos')
         print('5 -- Simulação de trajeto')
-        print('6 -- Sair')
+        print('0 -- Sair')
         opcao = input('\n O que deseja realizar? --- ')
 
         if opcao == '0':

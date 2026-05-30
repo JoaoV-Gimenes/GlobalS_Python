@@ -1,7 +1,7 @@
 [
     {
-        "nome": "Satï¿½lite Wind",
-        "tipo": "Satï¿½lite",
+        "nome": "Satélite Wind",
+        "tipo": "Satélite",
         "posicao": [
             7500.0,
             300.0,
@@ -22,14 +22,14 @@
             100.0
         ],
         "velocidade": [
-            10.0,
+            4.0,
             0.3,
             0.1
         ]
     },
     {
         "nome": "Dot",
-        "tipo": "satï¿½lite",
+        "tipo": "satélite",
         "posicao": [
             6000.0,
             2000.0,
@@ -51,7 +51,7 @@
         ],
         "velocidade": [
             2.0,
-            13.0,
+            1.0,
             4.0
         ]
     }
