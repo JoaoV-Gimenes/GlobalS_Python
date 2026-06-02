@@ -7,11 +7,11 @@ def carregar_objetos():
         return json.load(f)
     
 ## Função para printar as inforações dos objetos no docuento .json
-def exibir_objetos(objetos):
-    for i, obj in enumerate(objetos):
+def exibir_objetos(objetos, inicio=0):
+    for i, obj in enumerate(objetos, start=inicio):
         print(f'\n[{i+1}] {obj["nome"]} — {obj["tipo"]}')
-        print(f'    Posição:    X={obj["posicao"][0]} Y={obj["posicao"][1]} Z={obj["posicao"][2]} km')
-        print(f'    Velocidade: X={obj["velocidade"][0]} Y={obj["velocidade"][1]} Z={obj["velocidade"][2]} km/s')
+        print(f'Posição:    X= {obj["posicao"][0]:.2f} Y= {obj["posicao"][1]:.2f} Z= {obj["posicao"][2]:.2f} km')
+        print(f'Velocidade: X= {obj["velocidade"][0]:.4f} Y= {obj["velocidade"][1]:.4f} Z= {obj["velocidade"][2]:.4f} km/s')
     
 def executar():
     ## leitura de dados 
@@ -29,7 +29,7 @@ def executar():
         fim = inicio + por_pagina
 
         ## Printa as inforações de cada objetos no docuento .json
-        exibir_objetos(objetos)
+        exibir_objetos(objetos[inicio:fim], inicio=inicio)
 
         ## Termina o loop caso não tenha mais objetos para mostrar
         if fim >= len(objetos):
