@@ -1,19 +1,5 @@
 [
     {
-        "nome": "feasce",
-        "tipo": "detrito",
-        "posicao": [
-            3000.0,
-            2000.0,
-            100.0
-        ],
-        "velocidade": [
-            4.0,
-            0.3,
-            0.1
-        ]
-    },
-    {
         "nome": "Dot",
         "tipo": "satélite",
         "posicao": [
@@ -28,7 +14,7 @@
         ]
     },
     {
-        "nome": "Gooneras",
+        "nome": "teste",
         "tipo": "satélite ",
         "posicao": [
             200.0,
@@ -39,20 +25,6 @@
             2.0,
             1.0,
             4.0
-        ]
-    },
-    {
-        "nome": "Quandale",
-        "tipo": "Detrito",
-        "posicao": [
-            200.0,
-            4000.0,
-            10.0
-        ],
-        "velocidade": [
-            0.0,
-            15.0,
-            0.0
         ]
     },
     {
@@ -151,6 +123,34 @@
             4.0,
             2.0,
             0.0
+        ]
+    },
+    {
+        "nome": "SAC-D (AQUARIUS)",
+        "tipo": "satélite",
+        "posicao": [
+            3826.2551390070857,
+            -1227.5465964937734,
+            -5755.848740306113
+        ],
+        "velocidade": [
+            -6.258188969422421,
+            0.09084348186561685,
+            -4.182535419436534
+        ]
+    },
+    {
+        "nome": "Demonstração",
+        "tipo": "Satélite",
+        "posicao": [
+            5340.0,
+            1040.0,
+            3349.0
+        ],
+        "velocidade": [
+            1.4,
+            2.3,
+            5.1
         ]
     }
 ]

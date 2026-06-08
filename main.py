@@ -10,7 +10,6 @@ def menu():
         '5': listagem.executar,
         '6': distancia.executar,
         '7': simulacao.executar,
-        '0': None
     }
 
     while True:

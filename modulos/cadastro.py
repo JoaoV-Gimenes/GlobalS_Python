@@ -2,6 +2,29 @@ import os
 import json
 import numpy as np
 
+def valores_posicao():
+    while True:
+        try:
+            x = float(input('Posição X (km): '))
+            y = float(input('Posição Y (km): '))
+            z = float(input('Posição Z (km): '))
+            return x, y, z
+        except ValueError:
+            print('Digite apenas números / Utilize "." ou invés de "," !')
+
+
+def valores_velocidade():
+    while True:
+        try:
+            x = float(input('Velocidade X (km/s): '))
+            y = float(input('Velocidade Y (km/s): '))
+            z = float(input('Velocidade Z (km/s): '))
+            return x, y, z
+        except ValueError:
+            print('Digite apenas números / Utilize "." ou invés de "," !')
+    
+
+
 def salvar_objeto(corpo):
     ## Carrega o arquivo com os dados já existentes
     if os.path.exists('dados/objetos.json'):
@@ -29,18 +52,12 @@ def cadastro_inicial():
         while tipo not in ['Satelite', 'Satélite', 'Detrito']:
             print('Opção inválida!')
             tipo = input('Tipo (satélite ou detrito): ').title()
-            
-        posicao = [
-            float(input('Posição X (km): ')),
-            float(input('Posição Y (km): ')),
-            float(input('Posição Z (km): '))
-        ]
+        
+        x, y, z = valores_posicao()
+        posicao = [x, y, z]
 
-        velocidade = [
-            float(input('Velocidade X (km/s): ')),
-            float(input('Velocidade Y (km/s): ')),
-            float(input('Velocidade Z (km/s): '))
-        ]
+        x, y, z = valores_velocidade()
+        velocidade = [x, y, z]
         v_magnitude = np.linalg.norm(np.array(velocidade))
 
         if v_magnitude >= 11.2 :

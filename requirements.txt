@@ -3,5 +3,4 @@ matplotlib
 astropy
 poliastro
 requests
-python-dotenv
 sgp4

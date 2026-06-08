@@ -1,33 +1,40 @@
 import requests
-from dotenv import load_dotenv
-import os
 from sgp4.api import Satrec, WGS84
 from astropy.time import Time
 import numpy as np
 from modulos.cadastro import salvar_objeto
 
-## carrega o .env
-load_dotenv() 
-
 URL_LOGIN = 'https://www.space-track.org/ajaxauth/login'
 URL_BASE = 'https://www.space-track.org/basicspacedata/query'
 
-## Função para login no site do SPACETRACK
-def login():
 
+## Função para login no site do SPACETRACK
+_sessao = None  # variável global para guardar a sessão
+
+def obter_sessao():
+    global _sessao
+    
+    if _sessao:  # se já tem sessão ativa, reutiliza
+        return _sessao
+    
+    # se não tem, pede as credenciais
+    print('Login necessário para acessar dados do Space-Track')
+    usuario = input('Email: ')
+    senha = input('Senha: ')
+    
     session = requests.Session()
     credenciais = {
-        'identity': os.getenv('SPACETRACK_USER'),
-        'password': os.getenv('SPACETRACK_PASS')
+        'identity': usuario,
+        'password': senha
     }
-
     resposta = session.post(URL_LOGIN, data=credenciais)
-
+    
     if resposta.status_code == 200:
         print('✅ Login realizado com sucesso!')
-        return session
+        _sessao = session
+        return _sessao
     else:
-        print('❌ Erro no login! Verifique suas credenciais.')
+        print('❌ Credenciais inválidas!')
         return None
 
 ## Função para buscar TLEs reais
@@ -71,7 +78,7 @@ def tle_para_orbita(dados):
 
 
 def executar():
-    session = login()
+    session = obter_sessao()
 
     if session:
         nome = input('Nome do objeto (ex: ISS, HUBBLE): ').upper()
