@@ -85,7 +85,7 @@ def executar():
 
     ## Conclusão
     print(f'Simulação finalizada')
-    print(f'Menor distância detectada: {min(distancias)}')
+    print(f'Menor distância detectada: {min(distancias):.2f}')
     print(f'minuto: {minutos[distancias.index(min(distancias))]}')
 
     ## Geração do gráfico

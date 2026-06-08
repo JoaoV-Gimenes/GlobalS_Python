@@ -112,20 +112,6 @@
         ]
     },
     {
-        "nome": "Speed",
-        "tipo": "Detrito",
-        "posicao": [
-            200.0,
-            3500.0,
-            150.0
-        ],
-        "velocidade": [
-            1.0,
-            5.0,
-            3.0
-        ]
-    },
-    {
         "nome": "NOAA 19",
         "tipo": "satélite",
         "posicao": [
@@ -151,6 +137,20 @@
             2.4,
             3.1,
             0.1
+        ]
+    },
+    {
+        "nome": "Pog Ger",
+        "tipo": "Satélite",
+        "posicao": [
+            6.0,
+            7.0,
+            69.0
+        ],
+        "velocidade": [
+            4.0,
+            2.0,
+            0.0
         ]
     }
 ]
